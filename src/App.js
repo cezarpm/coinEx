@@ -11,15 +11,15 @@ const App = () => {
   useEffect(() => {
     const fetchCoins = async () => {
       const response = await axios
-        .get(`https://api.coinlore.com/api/ticker/?id=90`)
-        .then(data => data.data[0])
+        .get(`https://api.coinlore.com/api/tickers/`)
+        .then(data => data.data.data)
         .catch(error => error);
 
       setLoadedCoins(response);
     };
 
     fetchCoins();
-  });
+  }, []);
 
   return (
     <>
