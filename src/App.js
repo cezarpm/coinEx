@@ -1,8 +1,10 @@
 import React from "react";
+
+import Header from "./components/Header/Header";
 import "./App.css";
 
 const App = () => {
-  return <h1>Isso ai</h1>;
+  return <Header />;
 };
 
 export default App;
